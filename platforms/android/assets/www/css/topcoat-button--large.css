@@ -1,0 +1,7 @@
+.topcoat-button--large,
+.topcoat-button--large--quiet {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.688rem;
+  padding: 100 px;
+}

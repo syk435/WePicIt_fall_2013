@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, width=device-width, height=600" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>WePicIt</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="brick.css" />
+    <title>jQuery Example</title>
+</head>
+<body>
+    <x-layout>
+        <x-deck>
+            <x-card>
+                <x-layout>
+        <header>
+            <x-appbar>
+                <a href="#" onclick="switchMode();">Switch Mode</a>
+                <header>WePicIt</header>
+            </x-appbar>
+        </header>
+                    <section></section>
+                    <footer>
+                        <button class="topcoat-button--large" onclick='button1.myFunction()'>
+                            Button1
+                        </button>
+                        <button class="topcoat-button--large" onclick='button2.myFunction()'>
+                            Button2
+                        </button>
+                        <button class="topcoat-button--large" onclick='button3.myFunction()'>
+                            Button3
+                        </button>
+                    </footer>
+                </x-layout>
+            </x-card>
+            <x-card>
+                <x-layout>
+                    <section id="gallery">
+                        <ul>
+                        </ul>
+                    </section>
+                    <footer>
+                        <button class="topcoat-button--large" onclick="populateGallery()">
+                            Populate
+                        </button>
+                        <button class="topcoat-button--large">
+                            Another
+                        </button>
+                        <button class="topcoat-button--large">
+                            Yet Another
+                        </button>
+                    </footer>
+                </x-layout>
+            </x-card>
+        </x-deck>
+    </x-layout>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/cordova-1.5.0.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("deviceready", onDeviceReady, false);
+    </script>
+    <!-- <script type="text/javascript" src="phonegap.js"></script> -->
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/facebook.js"></script>
+    <script type="text/javascript" src="js/geolocation.js"></script>
+    <script type="text/javascript" src="brick.min.js"></script>
+    <script type="text/javascript" src="js/camera.js"></script>
+    <script type="text/javascript" src="js/Position.js"></script>
+    <script type="text/javascript" src="js/Media.js"></script>
+
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
+    <script> filepicker.setKey("AjoZRm2mnRdmSZzWxY34Mz"); </script>
+    <script>
+      $(document).ready(function() {
+      $.ajaxSetup({ cache: true });
+      $.getScript('//connect.facebook.net/en_UK/all.js', function(){
+        FB.init({
+          appId: '617293321624822',
+          channelUrl: 'https://obscure-savannah-9358.herokuapp.com/',
+        });     
+        $('#loginbutton,#feedbutton').removeAttr('disabled');
+        FB.getLoginStatus(updateStatusCallback);
+      });
+    });
+    </script>
+</body>
+</html>
+
+
