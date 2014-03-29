@@ -1,7 +1,7 @@
 from boto.s3.connection import S3Connection
 from boto.s3.key import Key
 
-conn = S3Connection('AKIAJA565YSJKP2KW27A', 'IT/NpY0sYBcfMILZULYPQ7I9DmudgUksV6S2jTi1')
+conn = S3Connection('*********', '************')
 bucket = conn.lookup('wepicit')
 
 rs = conn.get_all_buckets()
